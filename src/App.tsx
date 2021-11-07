@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import WelcomePage from './components/WelcomePage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='appWrapper'>
+      <WelcomePage />
+      {/* <DenseAppBar /> */}
+      {/* <div className='headerContainer'>
+
+      <h1 className='header'>Slayed x ShaylahRenee</h1>
+      </div>
+      <CustomCarousel />
+      <div className='cardContainer'>
+
+      <BasicCard />
+      </div>
+      <Link href="#" color="inherit">
+        {'Photoshoot gallery'}
+      </Link> */}
     </div>
   );
 }
