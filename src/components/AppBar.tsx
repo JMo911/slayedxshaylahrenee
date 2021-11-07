@@ -7,19 +7,24 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function DenseAppBar() {
-    const [menuOpen, setMenuOpen] = React.useState(false)
-    const handleOnClick = () => {
-        setMenuOpen(!menuOpen)
-    }
+  const [menuOpen, setMenuOpen] = React.useState(false);
+  const handleOnClick = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+      <AppBar position='static'>
+        <Toolbar variant='dense'>
+          <IconButton
+            edge='start'
+            color='inherit'
+            aria-label='menu'
+            sx={{ mr: 2 }}
+          >
             <MenuIcon onClick={handleOnClick} />
           </IconButton>
-          <Typography variant="h6" color="inherit" component="div">
+          <Typography variant='h6' color='inherit' component='div'>
             Photos
           </Typography>
         </Toolbar>
