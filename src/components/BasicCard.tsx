@@ -20,7 +20,7 @@ export default function BasicCard() {
   const spectralFont = 'Spectral, serif';
   return (
     <Card sx={{ minWidth: 275 }} className='basicCard'>
-      <CardContent>
+      <CardContent className='cardContent'>
         <Typography
           sx={{ fontSize: 14 }}
           color='text.secondary'

@@ -1,0 +1,5 @@
+.carousel {
+  background-color: var(--pale-green);
+  color: var(--dark-brown);
+  padding: 5px;
+}

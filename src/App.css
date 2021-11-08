@@ -1,3 +1,17 @@
+:root {
+  /* shaylah's picks */
+  --mood: #e6d4c6;
+  --earth: #af7a60;
+  --olive-green: #5f5c27;
+  --pale-green: #86835b;
+  --peach: #f19c5b;
+  --rose-gold: #d6bdbd;
+  --white: #eae1e2;
+  --dark-brown: #3a180e;
+  --powder-blue: #cdd2d7;
+}
+
 .appWrapper {
   font-family: 'Spectral', serif;
+  color: var(--ebony);
 }
