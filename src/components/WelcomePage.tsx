@@ -12,9 +12,9 @@ function WelcomePage() {
       <div className='headerContainer'>
         <h1 className='header'>Slayed x ShaylahRenee</h1>
       </div>
-      <div className='carouselContainer'>
-        <CustomCarousel />
-      </div>
+      {/* <div className='carouselContainer'> */}
+      <CustomCarousel />
+      {/* </div> */}
       <div className='cardContainer'>
         <BasicCard />
       </div>
