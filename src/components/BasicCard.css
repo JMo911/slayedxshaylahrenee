@@ -1,3 +1,8 @@
 .basicCard {
-    max-width: 50%;
+  max-width: 50%;
+}
+
+.cardContent {
+  background-color: var(--rose-gold);
+  color: var(--dark-brown);
 }

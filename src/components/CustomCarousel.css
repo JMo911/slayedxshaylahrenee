@@ -1,0 +1,17 @@
+.carousel {
+  background-color: var(--pale-green);
+  color: var(--dark-brown);
+  padding: 5px;
+  width: 60%;
+  min-height: 150px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+}
+
+.carouselImage {
+  height: 100px;
+}

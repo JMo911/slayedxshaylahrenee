@@ -1,20 +1,28 @@
 .welcomePageWrapper {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--white);
+  padding-bottom: 40px;
 }
 
-.carouselContainer {
-    width: 60%;
-}
+/* .carouselContainer {
+  width: 60%;
+} */
 
 .headerContainer {
-    text-align: center;
-  }
-  .header {
-    font-size: xxx-large;
-  }
-  
-  .cardContainer {
-    margin-top: 20px;
-  }
+  text-align: center;
+}
+.header {
+  font-size: xxx-large;
+}
+
+.cardContainer {
+  margin-top: 20px;
+}
+
+.aboutMe {
+  width: 60%;
+  padding: 3em;
+  margin-top: 10px;
+}
