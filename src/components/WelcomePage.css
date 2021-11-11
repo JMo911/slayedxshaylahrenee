@@ -9,6 +9,11 @@
 /* .carouselContainer {
   width: 60%;
 } */
+.menuWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 .headerContainer {
   text-align: center;

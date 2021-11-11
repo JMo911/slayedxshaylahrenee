@@ -1,13 +1,28 @@
 import { Link, Paper } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
 import './WelcomePage.css';
 import BasicCard from './BasicCard';
 import { CustomCarousel } from './CustomCarousel';
 import { MaterialImage } from './MaterialImage';
+import MenuStack from './MenuStack';
+import { BaseButton } from './BaseButton';
 
 function WelcomePage() {
+  const [showMenu, setShowMenu] = useState(false);
+  const handleOnClick = () => {
+    setShowMenu(!showMenu);
+  };
   return (
     <div className='welcomePageWrapper'>
+      <div className='menuWrapper'>
+        <BaseButton
+          variant='outlined'
+          message='Menu'
+          icon={null}
+          onClick={handleOnClick}
+        />
+        {showMenu && <MenuStack />}
+      </div>
       {/* <DenseAppBar /> */}
       <div className='headerContainer'>
         <h1 className='header'>Slayed x ShaylahRenee</h1>
