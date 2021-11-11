@@ -15,3 +15,21 @@
   font-family: 'Spectral', serif;
   color: var(--ebony);
 }
+
+.menuWrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.headerContainer {
+  text-align: center;
+}
+.header {
+  font-size: xxx-large;
+}
+
+.styledLink {
+  color: inherit;
+  text-decoration: inherit;
+}

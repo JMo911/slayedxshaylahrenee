@@ -1,0 +1,11 @@
+.styledLink {
+  text-decoration: inherit;
+  color: inherit;
+  /* &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+      text-decoration: none;
+    } */
+}

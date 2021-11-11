@@ -3,3 +3,8 @@
   left: 0;
   top: 0;
 } */
+
+.menuItem {
+  color: inherit;
+  text-decoration: inherit;
+}
