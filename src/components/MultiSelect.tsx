@@ -8,6 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import { extras, services } from './PricingPage';
+import { FilledInput } from '@mui/material';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -60,15 +61,19 @@ export default function MultipleSelectChip() {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id='demo-multiple-chip-label'>Chip</InputLabel>
+      <FormControl
+        sx={{ m: 1, display: 'flex', justifyContent: 'center' }}
+        variant='filled'
+        required
+      >
+        <InputLabel id='demo-multiple-chip-label'>Style</InputLabel>
         <Select
           labelId='demo-multiple-chip-label'
           id='demo-multiple-chip'
           multiple
           value={selectedServices}
           onChange={handleChange}
-          input={<OutlinedInput id='select-multiple-chip' label='Chip' />}
+          input={<FilledInput id='select-multiple-chip' />}
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
