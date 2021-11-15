@@ -71,8 +71,8 @@ export const PricingPage: React.FC = () => {
               component='img'
               height='140'
               image={service.photoSource}
-              className='cardMedia'
               alt='green iguana'
+              sx={{ objectFit: 'scale-down' }}
             />
             <CardContent>
               <Typography gutterBottom variant='h5' component='div'>
