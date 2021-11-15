@@ -15,53 +15,54 @@ import {
 import React from 'react';
 import './PricingPage.css';
 
-export const PricingPage: React.FC = () => {
-  const services = [
-    {
-      name: 'SlayedXShay Glam',
-      price: 60,
-      photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris',
-    },
-    {
-      name: 'Woke Up Like This',
-      price: 45,
-      photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris',
-    },
-    {
-      name: 'Ultimate Glam',
-      price: 80,
-      photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris',
-    },
-  ];
+export const services = [
+  {
+    name: 'SlayedXShay Glam',
+    price: 60,
+    photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris',
+  },
+  {
+    name: 'Woke Up Like This',
+    price: 45,
+    photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris',
+  },
+  {
+    name: 'Ultimate Glam',
+    price: 80,
+    photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris',
+  },
+];
 
-  const extras = [
-    {
-      name: 'Lashes',
-      price: 10,
-    },
-    {
-      name: 'Brows',
-      price: 15,
-    },
-    {
-      name: 'Eye Shadow',
-      price: 20,
-    },
-    {
-      name: 'Cut Crease Eye Shadow',
-      price: 25,
-    },
-    {
-      name: 'Glitter',
-      price: 5,
-    },
-  ];
+export const extras = [
+  {
+    name: 'Lashes',
+    price: 10,
+  },
+  {
+    name: 'Brows',
+    price: 15,
+  },
+  {
+    name: 'Eye Shadow',
+    price: 20,
+  },
+  {
+    name: 'Cut Crease Eye Shadow',
+    price: 25,
+  },
+  {
+    name: 'Glitter',
+    price: 5,
+  },
+];
+
+export const PricingPage: React.FC = () => {
   return (
     <div className='pricingPageWrapper'>
       {services.map((service) => {
