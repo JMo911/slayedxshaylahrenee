@@ -1,4 +1,13 @@
 .pricingPageWrapper {
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+
+.cardMedia {
+  object-fit: scale-down;
+}
+
+.serviceCard {
+  margin-top: 10px;
 }
