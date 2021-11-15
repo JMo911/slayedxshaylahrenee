@@ -1,11 +1,17 @@
-import { Box, FormGroup, TextField } from '@mui/material';
+import { Alert, Box, Button, FormGroup, TextField } from '@mui/material';
 import React from 'react';
 import './BookingPage.css';
 import MultiSelect from './MultiSelect';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 export const BookingPage: React.FC = () => {
   return (
     <div className='bookingPageWrapper'>
+      <Alert severity='warning'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris{' '}
+      </Alert>
       <Box
         component='form'
         sx={{
@@ -45,6 +51,18 @@ export const BookingPage: React.FC = () => {
         </FormGroup>
         <MultiSelect />
       </Box>
+      <Alert severity='info'>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris{' '}
+      </Alert>
+      <Button
+        variant='contained'
+        startIcon={<AttachMoneyIcon />}
+        sx={{ marginTop: '10px', backgroundColor: 'var(--olive-green)' }}
+      >
+        Pay Now
+      </Button>
     </div>
   );
 };
