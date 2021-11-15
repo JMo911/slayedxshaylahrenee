@@ -11,6 +11,10 @@
   --powder-blue: #cdd2d7;
 }
 
+body {
+  background-color: var(--white);
+}
+
 .appWrapper {
   font-family: 'Spectral', serif;
   color: var(--ebony);

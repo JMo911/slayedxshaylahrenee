@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-flow: column;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   padding-bottom: 40px;
 }
 
