@@ -16,6 +16,9 @@ function App() {
   const handleOnClick = () => {
     setShowMenu(!showMenu);
   };
+  const handleOnBlur = () => {
+    setShowMenu(false);
+  };
   return (
     <div className='appWrapper'>
       <div className='headerContainer'>
@@ -36,6 +39,7 @@ function App() {
             message={<Typography variant='button'>Menu</Typography>}
             icon={null}
             onClick={handleOnClick}
+            // onBlur={handleOnBlur}
           />
           {showMenu && <MenuStack />}
         </div>

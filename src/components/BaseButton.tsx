@@ -11,9 +11,15 @@ export const BaseButton = ({
   icon,
   message,
   onClick,
+  onBlur,
 }: BaseButtonProps) => {
   return (
-    <Button variant={variant} startIcon={icon} onClick={onClick}>
+    <Button
+      variant={variant}
+      startIcon={icon}
+      onClick={onClick}
+      onBlur={onBlur}
+    >
       {message}
     </Button>
   );
