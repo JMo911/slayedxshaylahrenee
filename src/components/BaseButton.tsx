@@ -3,7 +3,7 @@ import Button, { ButtonProps } from '@mui/material/Button';
 
 interface BaseButtonProps extends ButtonProps {
   icon: any;
-  message: string;
+  message: any;
 }
 
 export const BaseButton = ({

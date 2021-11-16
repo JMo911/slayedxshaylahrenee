@@ -59,7 +59,20 @@ export const BookingPage: React.FC = () => {
       <Button
         variant='contained'
         startIcon={<AttachMoneyIcon />}
-        sx={{ marginTop: '10px', backgroundColor: 'var(--olive-green)' }}
+        sx={{
+          marginTop: '10px',
+          backgroundColor: 'var(--pale-green)',
+          ':hover': {
+            bgcolor: 'var(--olive-green)', // theme.palette.primary.main
+            color: 'white',
+          },
+        }}
+        // sx={{
+        // ':hover': {
+        //   bgcolor: 'primary.main', // theme.palette.primary.main
+        //   color: 'white',
+        // },
+        // }}
       >
         Pay Now
       </Button>

@@ -16,7 +16,7 @@ body {
 }
 
 .appWrapper {
-  font-family: 'Spectral', serif;
+  /* font-family: 'Spectral', serif; */
   color: var(--ebony);
 }
 

@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import './MenuStack.css';
 import { Link } from 'react-router-dom';
+import { Typography } from '@mui/material';
 // import { Link } from './Link';
 
 export default function MenuStack() {
@@ -17,16 +18,24 @@ export default function MenuStack() {
     <div className='menuStackWrapper'>
       <Stack spacing={2}>
         <Link to='gallery' className='menuItem'>
-          <Item>Gallery</Item>
+          <Item>
+            <Typography variant='button'>Gallery</Typography>
+          </Item>
         </Link>
         <Link to='prices' className='menuItem'>
-          <Item>Prices</Item>
+          <Item>
+            <Typography variant='button'>Prices</Typography>
+          </Item>
         </Link>
         <Link to='booking' className='menuItem'>
-          <Item>Booking</Item>
+          <Item>
+            <Typography variant='button'>Booking</Typography>
+          </Item>
         </Link>
         <Link to='contact' className='menuItem'>
-          <Item>Contact</Item>
+          <Item>
+            <Typography variant='button'>Contact</Typography>
+          </Item>
         </Link>
       </Stack>
     </div>

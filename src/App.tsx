@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material';
 import React, { useState } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -19,13 +20,13 @@ function App() {
     <div className='appWrapper'>
       <div className='headerContainer'>
         <Link to='/' className='styledLink'>
-          <h1 className='header'>Slayed x ShaylahRenee</h1>
+          <Typography variant='h1'>Slayed x ShaylahRenee</Typography>
         </Link>
       </div>
       <div className='menuWrapper'>
         <BaseButton
           variant='outlined'
-          message='Menu'
+          message={<Typography variant='button'>Menu</Typography>}
           icon={null}
           onClick={handleOnClick}
         />
