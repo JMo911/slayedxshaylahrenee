@@ -19,7 +19,12 @@ function App() {
   return (
     <div className='appWrapper'>
       <div className='headerContainer'>
-        <Link href='/' color='inherit' underline='none' variant='h1'>
+        <Link
+          href='/slayedxshaylahrenee'
+          color='inherit'
+          underline='none'
+          variant='h1'
+        >
           Slayed x ShaylahRenee
         </Link>
       </div>
@@ -36,7 +41,7 @@ function App() {
         </div>
         <div className='pageWrapper'>
           <Routes>
-            <Route path='/' element={<WelcomePage />} />
+            <Route path='/slayedxshaylahrenee' element={<WelcomePage />} />
             <Route path='gallery' element={<GalleryPage />} />
             <Route path='prices' element={<PricingPage />} />
             <Route path='booking' element={<BookingPage />} />
