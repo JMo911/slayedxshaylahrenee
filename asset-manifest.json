@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/slayedxshaylahrenee/static/css/main.8d9d7e24.chunk.css",
-    "main.js": "/slayedxshaylahrenee/static/js/main.37994e10.chunk.js",
-    "main.js.map": "/slayedxshaylahrenee/static/js/main.37994e10.chunk.js.map",
+    "main.css": "/slayedxshaylahrenee/static/css/main.9bf1b96f.chunk.css",
+    "main.js": "/slayedxshaylahrenee/static/js/main.d410c4b1.chunk.js",
+    "main.js.map": "/slayedxshaylahrenee/static/js/main.d410c4b1.chunk.js.map",
     "runtime-main.js": "/slayedxshaylahrenee/static/js/runtime-main.f5f76dd8.js",
     "runtime-main.js.map": "/slayedxshaylahrenee/static/js/runtime-main.f5f76dd8.js.map",
     "static/js/2.d04fedc5.chunk.js": "/slayedxshaylahrenee/static/js/2.d04fedc5.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.234867ed.chunk.js": "/slayedxshaylahrenee/static/js/3.234867ed.chunk.js",
     "static/js/3.234867ed.chunk.js.map": "/slayedxshaylahrenee/static/js/3.234867ed.chunk.js.map",
     "index.html": "/slayedxshaylahrenee/index.html",
-    "static/css/main.8d9d7e24.chunk.css.map": "/slayedxshaylahrenee/static/css/main.8d9d7e24.chunk.css.map",
+    "static/css/main.9bf1b96f.chunk.css.map": "/slayedxshaylahrenee/static/css/main.9bf1b96f.chunk.css.map",
     "static/js/2.d04fedc5.chunk.js.LICENSE.txt": "/slayedxshaylahrenee/static/js/2.d04fedc5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f5f76dd8.js",
     "static/js/2.d04fedc5.chunk.js",
-    "static/css/main.8d9d7e24.chunk.css",
-    "static/js/main.37994e10.chunk.js"
+    "static/css/main.9bf1b96f.chunk.css",
+    "static/js/main.d410c4b1.chunk.js"
   ]
 }
