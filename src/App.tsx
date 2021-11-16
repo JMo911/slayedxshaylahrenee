@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
+import { Link, Typography } from '@mui/material';
 import React, { useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { BaseButton } from './components/BaseButton';
 import { BookingPage } from './components/BookingPage';
@@ -19,40 +19,31 @@ function App() {
   return (
     <div className='appWrapper'>
       <div className='headerContainer'>
-        <Link to='/' className='styledLink'>
-          <Typography variant='h1'>Slayed x ShaylahRenee</Typography>
+        <Link href='/' color='inherit' underline='none' variant='h1'>
+          Slayed x ShaylahRenee
         </Link>
       </div>
-      <div className='menuWrapper'>
-        <BaseButton
-          variant='outlined'
-          message={<Typography variant='button'>Menu</Typography>}
-          icon={null}
-          onClick={handleOnClick}
-        />
-        {showMenu && <MenuStack />}
-      </div>
-      <Routes>
-        <Route path='/' element={<WelcomePage />} />
-        <Route path='gallery' element={<GalleryPage />} />
-        <Route path='prices' element={<PricingPage />} />
-        <Route path='booking' element={<BookingPage />} />
-        <Route path='contact' element={<ContactPage />} />
-      </Routes>
 
-      {/* <DenseAppBar /> */}
-      {/* <div className='headerContainer'>
-
-      <h1 className='header'>Slayed x ShaylahRenee</h1>
+      <div className='layoutWrapper'>
+        <div className='menuWrapper'>
+          <BaseButton
+            variant='outlined'
+            message={<Typography variant='button'>Menu</Typography>}
+            icon={null}
+            onClick={handleOnClick}
+          />
+          {showMenu && <MenuStack />}
+        </div>
+        <div className='pageWrapper'>
+          <Routes>
+            <Route path='/' element={<WelcomePage />} />
+            <Route path='gallery' element={<GalleryPage />} />
+            <Route path='prices' element={<PricingPage />} />
+            <Route path='booking' element={<BookingPage />} />
+            <Route path='contact' element={<ContactPage />} />
+          </Routes>
+        </div>
       </div>
-      <CustomCarousel />
-      <div className='cardContainer'>
-
-      <BasicCard />
-      </div>
-      <StyledLink href="#" color="inherit">
-        {'Photoshoot gallery'}
-      </StyledLink> */}
     </div>
   );
 }

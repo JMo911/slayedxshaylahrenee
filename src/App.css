@@ -15,25 +15,16 @@ body {
   background-color: var(--white);
 }
 
-.appWrapper {
-  /* font-family: 'Spectral', serif; */
-  color: var(--ebony);
+.layoutWrapper {
+  display: flex;
 }
 
 .menuWrapper {
-  position: absolute;
-  left: 0;
-  top: 0;
+  padding: 0 10px 0 10px;
 }
 
-.headerContainer {
-  text-align: center;
-}
-.header {
-  font-size: xxx-large;
-}
-
-.styledLink {
-  color: inherit;
-  text-decoration: inherit;
+.pageWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
