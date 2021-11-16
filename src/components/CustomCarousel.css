@@ -1,17 +1,24 @@
 .carousel {
-  background-color: var(--pale-green);
-  color: var(--dark-brown);
   padding: 5px;
-  width: 60%;
-  min-height: 150px;
+  width: 100%;
+  min-height: 300px;
+  max-height: 400px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  background-color: transparent;
-}
+/* .imageContainer {
+  height: 200px;
+  width: 200px;
+} */
 
 .carouselImage {
-  height: 100px;
+  min-height: 300px;
+  max-height: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px var(--dark-brown);
+  /* border: 1px solid var(--earth); */
+  /* object-fit: scale-down; */
 }

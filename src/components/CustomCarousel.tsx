@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel';
-import { Paper, Button } from '@mui/material';
 import './CustomCarousel.css';
 
 interface PhotoType {
@@ -129,21 +128,17 @@ export const CustomCarousel = () => {
   ];
 
   return (
-    <Carousel autoPlay className='carousel' indicators={false}>
-      {photos.map((item, i) => (
-        <Item key={i} src={item.src} alt={item.alt} />
+    <Carousel autoPlay className='carousel' indicators={false} duration={1000}>
+      {photos.map((photo, i) => (
+        // <div className='imageContainer'>
+        <img
+          key={i}
+          src={photo.src}
+          alt={photo.alt}
+          className='carouselImage'
+        />
+        // </div>
       ))}
     </Carousel>
-  );
-};
-
-const Item = (props: { src: string; alt: string }) => {
-  const { src, alt } = props;
-  return (
-    <div className='imageContainer'>
-      <img src={src} alt={alt} className='carouselImage' />
-
-      {/* <Button className='CheckButton'>Check it out!</Button> */}
-    </div>
   );
 };
