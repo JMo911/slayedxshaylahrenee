@@ -1,4 +1,5 @@
-import { Link, Typography } from '@mui/material';
+// import { BottomNavigation } from '@material-ui/core';
+import { BottomNavigation, Link, Paper, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -74,6 +75,28 @@ function App() {
           </Routes>
         </div>
       </div>
+      {/* <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}> */}
+      <BottomNavigation
+      // showLabels
+      // sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
+      // value={value}
+      // onChange={(event, newValue) => {
+      //   setValue(newValue);
+      // }}
+      >
+        <Link
+          href='https://www.jacob-b-moss.com/landing'
+          color='inherit'
+          underline='none'
+          variant='subtitle2'
+        >
+          Powered by <span className='mossCodeLogo'>MossCode</span>
+        </Link>
+        {/* <BottomNavigationAction label="Recents" icon={<RestoreIcon /> } /> */}
+        {/* <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+          <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} /> */}
+      </BottomNavigation>
+      {/* </Paper> */}
     </div>
   );
 }

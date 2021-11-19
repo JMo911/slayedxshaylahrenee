@@ -28,3 +28,8 @@ body {
   justify-content: center;
   width: 100%;
 }
+
+.mossCodeLogo {
+  color: #df6919;
+  font-family: Odibee Sans, cursive;
+}
