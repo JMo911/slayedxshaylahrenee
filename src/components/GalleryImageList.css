@@ -8,3 +8,9 @@
 .galleryImageList::-webkit-scrollbar {
   display: none;
 }
+
+.galleryImg {
+  object-fit: scale-down !important;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px var(--dark-brown);
+}
