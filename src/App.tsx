@@ -1,5 +1,5 @@
 import { Link, Typography } from '@mui/material';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import { BaseButton } from './components/BaseButton';
@@ -13,12 +13,33 @@ import WelcomePage from './components/WelcomePage';
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = React.useRef();
+  const useOutsideAlerter = (ref: any) => {
+    useEffect(() => {
+      /**
+       * Alert if clicked on outside of element
+       */
+      function handleClickOutside(event: any) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          setShowMenu(false);
+        }
+      }
+
+      // Bind the event listener
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+        // Unbind the event listener on clean up
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, [ref]);
+  };
+
+  useOutsideAlerter(menuRef);
+
   const handleOnClick = () => {
     setShowMenu(!showMenu);
   };
-  const handleOnBlur = () => {
-    setShowMenu(false);
-  };
+
   return (
     <div className='appWrapper'>
       <div className='headerContainer'>
@@ -41,7 +62,7 @@ function App() {
             onClick={handleOnClick}
             // onBlur={handleOnBlur}
           />
-          {showMenu && <MenuStack />}
+          {showMenu && <MenuStack ref={menuRef} />}
         </div>
         <div className='pageWrapper'>
           <Routes>

@@ -62,7 +62,7 @@ export const BookingPage: React.FC = () => {
         variant='contained'
         startIcon={<AttachMoneyIcon />}
         sx={{
-          marginTop: '10px',
+          margin: '10px 0 10px 0',
           backgroundColor: 'var(--pale-green)',
           ':hover': {
             bgcolor: 'var(--olive-green)', // theme.palette.primary.main

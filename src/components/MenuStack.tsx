@@ -7,16 +7,17 @@ import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
 // import { Link } from './Link';
 
-export default function MenuStack() {
+const MenuStack = React.forwardRef((props, ref) => {
   const Item: any = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: 'center',
     color: theme.palette.text.secondary,
   }));
+
   return (
     <div className='menuStackWrapper'>
-      <Stack spacing={2}>
+      <Stack spacing='10px' sx={{ marginTop: '10px' }} ref={ref}>
         <Link to='gallery' className='menuItem'>
           <Item>
             <Typography variant='button'>Gallery</Typography>
@@ -40,4 +41,6 @@ export default function MenuStack() {
       </Stack>
     </div>
   );
-}
+});
+
+export default MenuStack;
