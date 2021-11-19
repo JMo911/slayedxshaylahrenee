@@ -98,7 +98,11 @@ export const PricingPage: React.FC = () => {
           marginTop: '10px',
           marginBottom: '10px',
         }}
-        subheader='Extras'
+        subheader={
+          <Typography variant='h6' sx={{ textAlign: 'center' }}>
+            Extras
+          </Typography>
+        }
       >
         {extras.map((extra) => {
           return (
