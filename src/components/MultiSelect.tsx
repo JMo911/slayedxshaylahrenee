@@ -1,7 +1,5 @@
 import * as React from 'react';
-import { Theme, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -21,42 +19,14 @@ const MenuProps = {
   },
 };
 
-// const services = services
-
-const selections = [
-  'Oliver Hansen',
-  'Van Henry',
-  'April Tucker',
-  'Ralph Hubbard',
-  'Omar Alexander',
-  'Carlos Abbott',
-  'Miriam Wagner',
-  'Bradley Wilkerson',
-  'Virginia Andrews',
-  'Kelly Snyder',
-];
-
-// function getStyles(selection: string, personName: string[], theme: Theme) {
-//   return {
-//     fontWeight:
-//       personName.indexOf(selection) === -1
-//         ? theme.typography.fontWeightRegular
-//         : theme.typography.fontWeightMedium,
-//   };
-// }
-
 export default function MultipleSelectChip() {
-  const theme = useTheme();
   const [selectedServices, setSelectedServices] = React.useState<string[]>([]);
 
   const handleChange = (event: SelectChangeEvent<typeof selectedServices>) => {
     const {
       target: { value },
     } = event;
-    setSelectedServices(
-      // On autofill we get a the stringified value.
-      typeof value === 'string' ? value.split(',') : value
-    );
+    setSelectedServices(typeof value === 'string' ? value.split(',') : value);
   };
 
   return (
@@ -84,20 +54,12 @@ export default function MultipleSelectChip() {
           MenuProps={MenuProps}
         >
           {services.map((service) => (
-            <MenuItem
-              key={service.name}
-              value={service.name}
-              //   style={getStyles(selection, personselection, theme)}
-            >
+            <MenuItem key={service.name} value={service.name}>
               {service.name}
             </MenuItem>
           ))}
           {extras.map((extra) => (
-            <MenuItem
-              key={extra.name}
-              value={extra.name}
-              //   style={getStyles(selection, personselection, theme)}
-            >
+            <MenuItem key={extra.name} value={extra.name}>
               {extra.name}
             </MenuItem>
           ))}

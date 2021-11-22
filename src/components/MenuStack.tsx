@@ -1,20 +1,17 @@
 import * as React from 'react';
-import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
 import './MenuStack.css';
-import { Link } from 'react-router-dom';
 import {
   Button,
   Divider,
+  Link,
   List,
   ListItem,
   ListItemText,
   Typography,
 } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import { extras, services } from './PricingPage';
-// import { Link } from './Link';
+import { services } from './PricingPage';
 
 const menuPages = [
   {
@@ -54,16 +51,14 @@ const MenuStack = React.forwardRef((props, ref) => {
                       />
                     ) : null
                   }
-                  sx={{ minWidth: '120px' }}
                   onClick={pageName === 'Prices' ? handleOnClick : () => {}}
+                  key={`${pageName}button`}
                 >
                   <Typography variant='button'>{pageName}</Typography>
                 </Button>
                 {iconDown && (
                   <List
                     sx={{
-                      width: '100%',
-                      maxWidth: 360,
                       bgcolor: 'background.paper',
                       marginTop: '0 !important',
                       marginBottom: '10px',
@@ -72,8 +67,15 @@ const MenuStack = React.forwardRef((props, ref) => {
                     {services.map((service) => {
                       return (
                         <>
-                          <ListItem alignItems='flex-start'>
-                            <ListItemText secondary={service.name} />
+                          <ListItem alignItems='flex-start' key={service.route}>
+                            <Link
+                              href={`/prices#${service.route}`}
+                              className='menuLink'
+                              color='inherit'
+                              underline='none'
+                            >
+                              <ListItemText secondary={service.name} />
+                            </Link>
                           </ListItem>
                           {service.name !== 'Ultimate Glam' ? (
                             <Divider variant='middle' component='li' />
@@ -87,8 +89,14 @@ const MenuStack = React.forwardRef((props, ref) => {
             );
           } else {
             return (
-              <Link to={pageName.toLowerCase()} className='menuItem'>
-                <Button variant='contained' sx={{ minWidth: '120px' }}>
+              <Link
+                href={pageName.toLowerCase()}
+                color='inherit'
+                underline='none'
+                className='menuItem'
+                key={pageName}
+              >
+                <Button variant='contained' sx={{ width: '100%' }}>
                   <Typography variant='button'>{pageName}</Typography>
                 </Button>
               </Link>

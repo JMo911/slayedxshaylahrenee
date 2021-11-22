@@ -1,23 +1,12 @@
 import { Card, CardContent, Link, Paper, Typography } from '@mui/material';
-import React, { useState } from 'react';
 import './WelcomePage.css';
-import BasicCard from './BasicCard';
 import { CustomCarousel } from './CustomCarousel';
 import { MaterialImage } from './MaterialImage';
-import MenuStack from './MenuStack';
-import { BaseButton } from './BaseButton';
-// import { StyledLink } from './StyledLink';
 
 function WelcomePage() {
   return (
     <div className='welcomePageWrapper'>
-      {/* <DenseAppBar /> */}
-      {/* <div className='headerContainer'>
-        <h1 className='header'>Slayed x ShaylahRenee</h1>
-      </div> */}
-      {/* <div className='carouselContainer'> */}
       <CustomCarousel />
-      {/* </div> */}
       <div className='cardContainer'>
         <Card sx={{ minWidth: 275 }} className='basicCard'>
           <CardContent className='cardContent'>
@@ -31,18 +20,11 @@ function WelcomePage() {
             <Typography variant='h5' component='div'>
               Fall Fun
             </Typography>
-            {/* <Typography sx={{ mb: 1.5 }} color="text.secondary">
-          adjective
-        </Typography> */}
             <Typography variant='body2'>
               let me tell you about all the stuff we did...
               <br />
-              {/* {'"a benevolent smile"'} */}
             </Typography>
           </CardContent>
-          {/* <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
         </Card>
       </div>
       <Link href='/gallery' color='inherit' underline='none' variant='button'>

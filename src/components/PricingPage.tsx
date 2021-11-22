@@ -12,12 +12,14 @@ import {
   ListItemText,
   Typography,
 } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './PricingPage.css';
 
 export const services = [
   {
     name: 'SlayedXShay Glam',
+    route: 'slayedXShayGlam',
     price: 60,
     photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
     description:
@@ -25,6 +27,7 @@ export const services = [
   },
   {
     name: 'Woke Up Like This',
+    route: 'wokeUpLikeThis',
     price: 45,
     photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
     description:
@@ -32,6 +35,7 @@ export const services = [
   },
   {
     name: 'Ultimate Glam',
+    route: 'ultimateGlam',
     price: 80,
     photoSource: `${process.env.PUBLIC_URL}/images/genericLipstickPhoto.jpg`,
     description:
@@ -63,16 +67,33 @@ export const extras = [
 ];
 
 export const PricingPage: React.FC = () => {
+  const location = useLocation();
+  useEffect(() => {
+    if (location.hash) {
+      let elem = document.getElementById(location.hash.slice(1));
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
   return (
     <div className='pricingPageWrapper'>
       {services.map((service) => {
         return (
-          <Card sx={{ maxWidth: 600 }} className='serviceCard'>
+          <Card
+            sx={{ maxWidth: 600 }}
+            className='serviceCard'
+            key={`${service.name}${service.route}`}
+          >
             <CardMedia
               component='img'
               height='140'
               image={service.photoSource}
-              alt='green iguana'
+              alt={service.name}
+              id={service.route}
               sx={{ objectFit: 'scale-down' }}
             />
             <CardContent>
@@ -85,7 +106,6 @@ export const PricingPage: React.FC = () => {
             </CardContent>
             <CardActions>
               <Button size='small'>Book Now</Button>
-              {/* <Button size='small'>Learn More</Button> */}
             </CardActions>
           </Card>
         );
@@ -107,7 +127,7 @@ export const PricingPage: React.FC = () => {
         {extras.map((extra) => {
           return (
             <>
-              <ListItem alignItems='flex-start'>
+              <ListItem alignItems='flex-start' key={extra.name}>
                 {/* <ListItemAvatar>
             <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
           </ListItemAvatar> */}

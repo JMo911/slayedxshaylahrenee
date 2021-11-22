@@ -21,6 +21,7 @@ body {
 
 .menuWrapper {
   padding: 0 10px 0 10px;
+  min-width: 15vw;
 }
 
 .pageWrapper {
