@@ -60,12 +60,13 @@ export const BookingPage: React.FC = () => {
       </Alert>
       <Button
         variant='contained'
+        fullWidth
         startIcon={<AttachMoneyIcon />}
         sx={{
           margin: '10px 0 10px 0',
-          backgroundColor: 'var(--pale-green)',
+          backgroundColor: 'var(--light-lilac)',
           ':hover': {
-            bgcolor: 'var(--olive-green)', // theme.palette.primary.main
+            bgcolor: 'var(--lilac)', // theme.palette.primary.main
             color: 'white',
           },
         }}

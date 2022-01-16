@@ -2,6 +2,8 @@
   /* shaylah's picks */
   --mood: #e6d4c6;
   --earth: #af7a60;
+  --lilac: #9f769d;
+  --light-lilac: #c5acc4;
   --olive-green: #5f5c27;
   --pale-green: #86835b;
   --peach: #f19c5b;
@@ -12,7 +14,8 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--mood);
+  /* AF8268 */
 }
 
 .layoutWrapper {
