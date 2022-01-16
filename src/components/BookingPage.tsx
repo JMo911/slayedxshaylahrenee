@@ -64,11 +64,11 @@ export const BookingPage: React.FC = () => {
         startIcon={<AttachMoneyIcon />}
         sx={{
           margin: '10px 0 10px 0',
-          backgroundColor: 'var(--light-lilac)',
-          ':hover': {
-            bgcolor: 'var(--lilac)', // theme.palette.primary.main
-            color: 'white',
-          },
+          // backgroundColor: 'var(--light-lilac)',
+          // ':hover': {
+          //   bgcolor: 'var(--lilac)', // theme.palette.primary.main
+          //   color: 'white',
+          // },
         }}
         // sx={{
         // ':hover': {

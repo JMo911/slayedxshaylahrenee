@@ -105,7 +105,9 @@ export const PricingPage: React.FC = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size='small'>Book Now</Button>
+              <Button size='small' href='/booking'>
+                Book Now
+              </Button>
             </CardActions>
           </Card>
         );

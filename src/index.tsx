@@ -9,12 +9,12 @@ import { createTheme, ThemeProvider } from '@mui/material';
 
 const THEME = createTheme({
   typography: {
-    fontFamily: `"Spectral", serif`,
+    fontFamily: 'Luxurious Roman',
   },
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#78A2CC',
+      main: '#9f769d',
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },

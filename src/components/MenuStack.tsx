@@ -24,7 +24,7 @@ const menuPages = [
     pageName: 'Booking',
   },
   {
-    pageName: 'Contact',
+    pageName: 'M • U • A',
   },
 ];
 

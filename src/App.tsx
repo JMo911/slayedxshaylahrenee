@@ -37,14 +37,7 @@ function App() {
   return (
     <div className='appWrapper'>
       <div className='headerContainer'>
-        <Link
-          href='/slayedxshaylahrenee'
-          color='inherit'
-          underline='none'
-          variant='h1'
-        >
-          Slayed x ShaylahRenee
-        </Link>
+        <img src={` ${process.env.PUBLIC_URL}/images/shaylahlogo.svg`}></img>
       </div>
 
       <div className='layoutWrapper'>

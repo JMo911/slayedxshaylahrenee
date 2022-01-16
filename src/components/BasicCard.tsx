@@ -17,25 +17,19 @@ import './BasicCard.css';
 // );
 
 export default function BasicCard() {
-  const spectralFont = 'Spectral, serif';
   return (
     <Card sx={{ minWidth: 275 }} className='basicCard'>
       <CardContent className='cardContent'>
-        <Typography
-          sx={{ fontSize: 14 }}
-          color='text.secondary'
-          gutterBottom
-          fontFamily={spectralFont}
-        >
+        <Typography sx={{ fontSize: 14 }} color='text.secondary' gutterBottom>
           Fall photo shoot!
         </Typography>
-        <Typography variant='h5' component='div' fontFamily={spectralFont}>
+        <Typography variant='h5' component='div'>
           Fall Fun
         </Typography>
         {/* <Typography sx={{ mb: 1.5 }} color="text.secondary">
           adjective
         </Typography> */}
-        <Typography variant='body2' fontFamily={spectralFont}>
+        <Typography variant='body2'>
           let me tell you about all the stuff we did...
           <br />
           {/* {'"a benevolent smile"'} */}
