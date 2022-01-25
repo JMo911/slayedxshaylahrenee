@@ -26,7 +26,7 @@ function WelcomePage() {
           </CardContent>
         </Card>
       </div> */}
-      <Link href='/prices' color='inherit' underline='none' variant='button'>
+      <Link href='/prices' underline='none' variant='button'>
         Packages + Pricing
       </Link>
     </div>

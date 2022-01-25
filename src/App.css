@@ -18,6 +18,10 @@ body {
   /* AF8268 */
 }
 
+.logo {
+  width: 100%;
+}
+
 .layoutWrapper {
   display: flex;
 }

@@ -1,4 +1,11 @@
-import { BottomNavigation, Link, Typography } from '@mui/material';
+import {
+  BottomNavigation,
+  Grid,
+  Link,
+  Typography,
+  Container,
+  Button,
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
@@ -13,53 +20,61 @@ import WelcomePage from './components/WelcomePage';
 function App() {
   const [showMenu, setShowMenu] = useState(false);
   const menuRef = React.useRef();
-  const useOutsideAlerter = (ref: any) => {
-    useEffect(() => {
-      function handleClickOutside(event: any) {
-        if (ref.current && !ref.current.contains(event.target)) {
-          setShowMenu(false);
-        }
-      }
+  // const useOutsideAlerter = (ref: any) => {
+  //   useEffect(() => {
+  //     function handleClickOutside(event: any) {
+  //       if (ref.current && !ref.current.contains(event.target)) {
+  //         setShowMenu(false);
+  //       }
+  //     }
 
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, [ref]);
-  };
+  //     document.addEventListener('mousedown', handleClickOutside);
+  //     return () => {
+  //       document.removeEventListener('mousedown', handleClickOutside);
+  //     };
+  //   }, [ref]);
+  // };
 
-  useOutsideAlerter(menuRef);
+  // useOutsideAlerter(menuRef);
 
   const handleOnClick = () => {
-    setShowMenu(!showMenu);
+    setShowMenu((currentState) => !currentState);
   };
 
   return (
-    <div className='appWrapper'>
-      <div className='headerContainer'>
-        <img src={` ${process.env.PUBLIC_URL}/images/shaylahlogo.svg`}></img>
-      </div>
+    <Container maxWidth='sm'>
+      {/* <div className='headerContainer'> */}
+      {/* <Grid item xs={10} justifyContent={'center'}> */}
+      <Link href={'/slayedxshaylahrenee'}>
+        <img
+          src={` ${process.env.PUBLIC_URL}/images/shaylahlogoCroppedFinal.svg`}
+          className='logo'
+        ></img>
+      </Link>
+      {/* </Grid> */}
+      {/* </div> */}
 
-      <div className='layoutWrapper'>
-        <div className='menuWrapper'>
-          <BaseButton
-            variant='outlined'
-            message={<Typography variant='button'>Menu</Typography>}
-            icon={null}
-            onClick={handleOnClick}
-          />
-          {showMenu && <MenuStack ref={menuRef} />}
-        </div>
-        <div className='pageWrapper'>
-          <Routes>
-            <Route path='/slayedxshaylahrenee' element={<WelcomePage />} />
-            <Route path='gallery' element={<GalleryPage />} />
-            <Route path='prices' element={<PricingPage />} />
-            <Route path='booking' element={<BookingPage />} />
-            <Route path='contact' element={<ContactPage />} />
-          </Routes>
-        </div>
-      </div>
+      {/* <div className='layoutWrapper'>
+        <div className='menuWrapper'> */}
+      {/* <Grid item xs={10} justifyContent={'center'}> */}
+      <Button variant='outlined' onClick={handleOnClick} fullWidth>
+        <Typography variant='button'>Menu</Typography>
+      </Button>
+      {/* </Grid> */}
+      {/* <Grid item xs={10} justifyContent={'center'}> */}
+      {showMenu && <MenuStack ref={menuRef} />}
+      {/* </Grid> */}
+      {/* </div>
+        <div className='pageWrapper'> */}
+      <Routes>
+        <Route path='/slayedxshaylahrenee' element={<WelcomePage />} />
+        <Route path='gallery' element={<GalleryPage />} />
+        <Route path='prices' element={<PricingPage />} />
+        <Route path='booking' element={<BookingPage />} />
+        <Route path='contact' element={<ContactPage />} />
+      </Routes>
+      {/* </div>
+      </div> */}
       {/* <BottomNavigation>
         <Link
           href='https://www.jacob-b-moss.com/'
@@ -70,7 +85,7 @@ function App() {
           Powered by <span className='mossCodeLogo'>MossCode</span>
         </Link>
       </BottomNavigation> */}
-    </div>
+    </Container>
   );
 }
 
