@@ -5,8 +5,17 @@ import './GalleryImageList.css';
 import { photos } from './CustomCarousel';
 
 export default function GalleryImageList() {
+  const determineColumns = () => {
+    return window.visualViewport.width < 800 ? 2 : 4;
+  };
+
   return (
-    <ImageList cols={4} className='galleryImageList' gap={10} variant='masonry'>
+    <ImageList
+      cols={determineColumns()}
+      className='galleryImageList'
+      gap={10}
+      variant='masonry'
+    >
       {photos.map((photo) => (
         <ImageListItem key={photo.src}>
           <img

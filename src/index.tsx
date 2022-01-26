@@ -14,27 +14,27 @@ const THEME = createTheme({
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
-      main: '#9f769d',
+      main: '#9f769d', //LILAC
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
     },
     secondary: {
       // light: '#0066ff',
-      main: '#B399D4',
+      main: '#d6bdbd', //ROSE-GOLD
       // dark: will be calculated from palette.secondary.main,
       // contrastText: '#ffcc00',
     },
     error: {
-      main: '#7B1114',
+      main: '#3a180e', //DARK-BROWN
     },
     warning: {
-      main: '#f19c5b',
+      main: '#f19c5b', //PEACH
     },
     info: {
-      main: '#cdd2d7',
+      main: '#cdd2d7', //POWDER-BLUE
     },
     success: {
-      main: '#86835b',
+      main: '#86835b', //PALE-GREEN
     },
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
@@ -47,6 +47,8 @@ const THEME = createTheme({
 
   // --mood: #e6d4c6;
   // --earth: #af7a60;
+  // --lilac: #9f769d;
+  // --light-lilac: #c5acc4;
   // --olive-green: #5f5c27;
   // --pale-green: #86835b;
   // --peach: #f19c5b;
