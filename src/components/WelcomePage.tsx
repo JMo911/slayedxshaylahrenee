@@ -3,12 +3,44 @@ import {
   CardContent,
   Divider,
   Link,
+  List,
+  ListItem,
+  ListItemText,
   Rating,
   Typography,
 } from '@mui/material';
 import './WelcomePage.css';
 import { CustomCarousel } from './CustomCarousel';
 import { useState } from 'react';
+import { Favorite, FavoriteBorder, Reviews } from '@mui/icons-material';
+
+const fakeReviews = [
+  {
+    rating: 5,
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    rating: 5,
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    rating: 5,
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    rating: 5,
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    rating: 5,
+    comment:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+];
 
 function WelcomePage() {
   const [rating, setRating] = useState(5);
@@ -16,41 +48,48 @@ function WelcomePage() {
   return (
     <div className='welcomePageWrapper'>
       <CustomCarousel />
-      {/* <div className='cardContainer'>
-        <Card sx={{ minWidth: 275 }} className='basicCard'>
-          <CardContent className='cardContent'>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color='text.secondary'
-              gutterBottom
-            >
-              Fall photo shoot!
-            </Typography>
-            <Typography variant='h5' component='div'>
-              Fall Fun
-            </Typography>
-            <Typography variant='body2'>
-              let me tell you about all the stuff we did...
-              <br />
-            </Typography>
-          </CardContent>
-        </Card>
-      </div> */}
       <Link href='/prices' underline='none' variant='button'>
         Packages + Pricing
       </Link>
-
       <Card sx={{ maxWidth: 600 }}>
-        {/* <CardMedia
-              component='img'
-              height='140'
-              image={service.photoSource}
-              alt={service.name}
-              id={service.route}
-              sx={{ objectFit: 'scale-down' }}
-            /> */}
+        <CardContent sx={{ maxHeight: '200px', overflowY: 'scroll' }}>
+          <List
+            sx={{
+              width: '100%',
+              bgcolor: 'background.paper',
+            }}
+          >
+            {fakeReviews.map((review) => {
+              return (
+                <>
+                  <ListItem>
+                    <Rating
+                      value={review.rating}
+                      readOnly
+                      size='small'
+                      icon={<Favorite />}
+                      emptyIcon={<FavoriteBorder />}
+                    />
+                    <ListItemText
+                      inset
+                      secondary={
+                        review.comment.length > 80
+                          ? review.comment.substring(0, 77).concat('...')
+                          : review.comment
+                      }
+                      secondaryTypographyProps={{
+                        variant: 'caption',
+                      }}
+                    />
+                  </ListItem>
+                  <Divider variant='inset' component='li' />
+                </>
+              );
+            })}
+          </List>
+        </CardContent>
         <Divider />
-        <CardContent>
+        <CardContent sx={{ textAlign: 'center' }}>
           <Typography gutterBottom variant='h5' component='div'>
             Post a review
           </Typography>
@@ -62,13 +101,10 @@ function WelcomePage() {
             onChange={(event, userRating) => {
               userRating && setRating(userRating);
             }}
+            icon={<Favorite />}
+            emptyIcon={<FavoriteBorder />}
           />
         </CardContent>
-        {/* <CardActions>
-              <Button size='small' href='/booking'>
-                Book Now
-              </Button>
-            </CardActions> */}
       </Card>
     </div>
   );
