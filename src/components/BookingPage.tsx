@@ -16,7 +16,7 @@ export const BookingPage: React.FC = () => {
       <Box
         component='form'
         sx={{
-          '& .MuiTextField-root': { m: 1, width: '25ch' },
+          '& .MuiTextField-root': { m: 1, width: '20ch' },
         }}
         noValidate
         autoComplete='off'
@@ -52,7 +52,7 @@ export const BookingPage: React.FC = () => {
         </FormGroup>
         <MultiSelect />
       </Box>
-      <Calendar />
+      {/* CALENDAR GOES HERE */}
       <Alert severity='info'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
