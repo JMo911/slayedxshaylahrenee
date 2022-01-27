@@ -4,7 +4,6 @@ import './MenuStack.css';
 import {
   Button,
   Divider,
-  Link,
   List,
   ListItem,
   ListItemText,
@@ -12,6 +11,7 @@ import {
 } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { services } from './PricingPage';
+import { Link } from 'react-router-dom';
 
 const menuPages = [
   {
@@ -67,12 +67,14 @@ const MenuStack = React.forwardRef((props, ref) => {
                     {services.map((service) => {
                       return (
                         <>
-                          <ListItem alignItems='flex-start' key={service.route}>
+                          <ListItem
+                            key={service.route}
+                            className={'prices-menu-link'}
+                          >
                             <Link
-                              href={`/prices#${service.route}`}
+                              to={`/slayedxshaylahrenee/prices#${service.route}`}
                               className='menuLink'
                               color='inherit'
-                              underline='none'
                             >
                               <ListItemText secondary={service.name} />
                             </Link>
@@ -90,10 +92,9 @@ const MenuStack = React.forwardRef((props, ref) => {
           } else {
             return (
               <Link
-                href={pageName.toLowerCase()}
+                to={'/slayedxshaylahrenee/' + pageName.toLowerCase()}
                 color='inherit'
-                underline='none'
-                className='menuItem'
+                className='menuLink'
                 key={pageName}
               >
                 <Button variant='contained' sx={{ width: '100%' }}>

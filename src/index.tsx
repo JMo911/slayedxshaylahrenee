@@ -3,8 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
+import WelcomePage from './components/WelcomePage';
+import { ContactPage } from '@mui/icons-material';
+import { BookingPage } from './components/BookingPage';
+import { GalleryPage } from './components/GalleryPage';
+import { PricingPage } from './components/PricingPage';
 // import { createTheme, ThemeProvider } from '@mui/system';
 
 const THEME = createTheme({
@@ -58,15 +63,26 @@ const THEME = createTheme({
   // --powder-blue: #cdd2d7;
 });
 
+const rootElement = document.getElementById('root');
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={THEME}>
-        <App />
+        <Routes>
+          <Route path='/slayedxshaylahrenee' element={<App />}>
+            <Route path='welcome' element={<WelcomePage />} />
+            <Route path='gallery' element={<GalleryPage />} />
+            <Route path='prices' element={<PricingPage />} />
+            <Route path='booking' element={<BookingPage />} />
+            <Route path='contact' element={<ContactPage />} />
+          </Route>
+        </Routes>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  // document.getElementById('root')
+  rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -32,3 +32,7 @@
   padding: 3em;
   margin-top: 10px;
 }
+
+.react-link {
+  text-decoration: none;
+}

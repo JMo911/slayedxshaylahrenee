@@ -4,3 +4,11 @@
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
+.menuLink {
+  text-decoration: none;
+}
+
+.prices-menu-link {
+  justify-content: center !important;
+}

@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   Divider,
-  Link,
   List,
   ListItem,
   ListItemText,
@@ -13,6 +12,7 @@ import './WelcomePage.css';
 import { CustomCarousel } from './CustomCarousel';
 import { useState } from 'react';
 import { Favorite, FavoriteBorder, Reviews } from '@mui/icons-material';
+import { Link } from 'react-router-dom';
 
 const fakeReviews = [
   {
@@ -48,8 +48,8 @@ function WelcomePage() {
   return (
     <div className='welcomePageWrapper'>
       <CustomCarousel />
-      <Link href='/prices' underline='none' variant='button'>
-        Packages + Pricing
+      <Link to='/prices' className='react-link'>
+        <Typography variant='h5'>Packages + Pricing</Typography>
       </Link>
       <Card sx={{ maxWidth: 600 }}>
         <CardContent sx={{ maxHeight: '200px', overflowY: 'scroll' }}>
