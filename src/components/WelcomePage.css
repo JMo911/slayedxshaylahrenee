@@ -35,4 +35,6 @@
 
 .react-link {
   text-decoration: none;
+  color: var(--lilac);
+  margin-bottom: 10px;
 }

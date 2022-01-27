@@ -128,7 +128,14 @@ export const photos: PhotoType[] = [
 
 export const CustomCarousel = () => {
   return (
-    <Carousel autoPlay className='carousel' indicators={false} duration={1000}>
+    <Carousel
+      autoPlay
+      className='carousel'
+      indicators={false}
+      stopAutoPlayOnHover={false}
+      navButtonsAlwaysInvisible
+      duration={1000}
+    >
       {photos.map((photo, i) => (
         // <div className='imageContainer'>
         <img

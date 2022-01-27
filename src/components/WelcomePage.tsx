@@ -48,7 +48,7 @@ function WelcomePage() {
   return (
     <div className='welcomePageWrapper'>
       <CustomCarousel />
-      <Link to='/prices' className='react-link'>
+      <Link to='/slayedxshaylahrenee/prices' className='react-link'>
         <Typography variant='h5'>Packages + Pricing</Typography>
       </Link>
       <Card sx={{ maxWidth: 600 }}>
