@@ -5,10 +5,6 @@
   transform: rotate(90deg);
 }
 
-.menuLink {
-  text-decoration: none;
-}
-
 .prices-menu-link {
-  justify-content: center !important;
+  text-align: center !important;
 }

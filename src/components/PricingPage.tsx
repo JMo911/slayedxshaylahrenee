@@ -13,7 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import './PricingPage.css';
 
 export const services = [
@@ -68,6 +68,7 @@ export const extras = [
 
 export const PricingPage: React.FC = () => {
   const location = useLocation();
+  let navigate = useNavigate();
   useEffect(() => {
     if (location.hash) {
       let elem = document.getElementById(location.hash.slice(1));
@@ -78,6 +79,10 @@ export const PricingPage: React.FC = () => {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }
   }, [location]);
+
+  const handleOnClick = () => {
+    navigate('/slayedxshaylahrenee/booking', { replace: true });
+  };
 
   return (
     <div className='pricingPageWrapper'>
@@ -105,7 +110,7 @@ export const PricingPage: React.FC = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size='small' href='/booking'>
+              <Button size='small' onClick={handleOnClick}>
                 Book Now
               </Button>
             </CardActions>

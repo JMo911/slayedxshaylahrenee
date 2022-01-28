@@ -1,4 +1,5 @@
 import {
+  Button,
   Card,
   CardContent,
   Divider,
@@ -11,8 +12,8 @@ import {
 import './WelcomePage.css';
 import { CustomCarousel } from './CustomCarousel';
 import { useState } from 'react';
-import { Favorite, FavoriteBorder, Reviews } from '@mui/icons-material';
-import { Link } from 'react-router-dom';
+import { Favorite, FavoriteBorder } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const fakeReviews = [
   {
@@ -44,13 +45,20 @@ const fakeReviews = [
 
 function WelcomePage() {
   const [rating, setRating] = useState(5);
+  const navigate = useNavigate();
+
+  const handlePackageLinkClick = () => {
+    navigate('/slayedxshaylahrenee/prices', {
+      replace: true,
+    });
+  };
 
   return (
     <div className='welcomePageWrapper'>
       <CustomCarousel />
-      <Link to='/slayedxshaylahrenee/prices' className='react-link'>
+      <Button onClick={handlePackageLinkClick} variant='text' size='small'>
         <Typography variant='h5'>Packages + Pricing</Typography>
-      </Link>
+      </Button>
       <Card sx={{ maxWidth: 600 }}>
         <CardContent sx={{ maxHeight: '200px', overflowY: 'scroll' }}>
           <List
