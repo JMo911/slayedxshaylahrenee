@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material';
 import WelcomePage from './components/WelcomePage';
-import { ContactPage } from '@mui/icons-material';
 import { BookingPage } from './components/BookingPage';
 import { GalleryPage } from './components/GalleryPage';
 import { PricingPage } from './components/PricingPage';
+import { ContactPage } from './components/ContactPage';
 // import { createTheme, ThemeProvider } from '@mui/system';
 
 const THEME = createTheme({
