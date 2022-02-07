@@ -24,7 +24,8 @@ const menuPages = [
     pageName: 'Booking',
   },
   {
-    pageName: 'M • U • A',
+    displayName: 'M • U • A',
+    pageName: 'contact',
   },
 ];
 
@@ -59,7 +60,7 @@ const MenuStack = React.forwardRef<React.ReactNode, MenuStackProps>(
     return (
       <div>
         <Stack spacing='10px' sx={{ marginTop: '10px' }} ref={ref}>
-          {menuPages.map(({ pageName }) => {
+          {menuPages.map(({ pageName, displayName }) => {
             if (pageName === 'Prices') {
               return (
                 <>
@@ -114,7 +115,9 @@ const MenuStack = React.forwardRef<React.ReactNode, MenuStackProps>(
                   sx={{ width: '100%' }}
                   onClick={() => handleLinkClick(pageName)}
                 >
-                  <Typography variant='button'>{pageName}</Typography>
+                  <Typography variant='button'>
+                    {displayName ? displayName : pageName}
+                  </Typography>
                 </Button>
               );
             }
