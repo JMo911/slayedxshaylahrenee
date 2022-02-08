@@ -7,9 +7,27 @@
 
 .carouselImage {
   border-radius: 5px;
-  /* box-shadow: 0px 0px 5px var(--dark-brown); */
-  border: 2px ridge var(--dark-brown);
+  box-shadow: 0px 0px 5px var(--dark-brown);
   max-width: 300px;
   max-height: 500px;
   margin-top: 10px;
+  position: absolute;
+}
+
+.hidden {
+  -webkit-transition: opacity 2s ease-out;
+  -moz-transition: opacity 2s ease-out;
+  -ms-transition: opacity 2s ease-out;
+  -o-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+  opacity: 0;
+}
+
+.visible {
+  -webkit-transition: opacity 2s ease-in;
+  -moz-transition: opacity 2s ease-in;
+  -ms-transition: opacity 2s ease-in;
+  -o-transition: opacity 2s ease-in;
+  transition: opacity 2s ease-in;
+  opacity: 1;
 }

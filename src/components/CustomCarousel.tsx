@@ -128,21 +128,17 @@ export const photos: PhotoType[] = [
 
 export const CustomCarousel = () => {
   const [index, setIndex] = useState(0);
-  const [currentPhoto, setCurrentPhoto] = useState(photos[index]);
 
   const switchPhotos = () => {
     if (index === photos.length - 1) {
-      setCurrentPhoto(photos[0]);
       setIndex(0);
     } else {
       setIndex(index + 1);
-      setCurrentPhoto(photos[index]);
     }
   };
 
   useEffect(() => {
-    let indexInterval = setInterval(switchPhotos, 2500);
-    console.log(photos.length);
+    let indexInterval = setInterval(switchPhotos, 4000);
 
     return () => {
       clearInterval(indexInterval);
@@ -151,31 +147,16 @@ export const CustomCarousel = () => {
 
   return (
     <div className='carouselContainer'>
-      <img
-        className='carouselImage'
-        src={currentPhoto.src}
-        alt={currentPhoto.alt}
-        key={currentPhoto.src}
-      ></img>
+      {photos.map((photo, i) => {
+        return (
+          <img
+            className={`carouselImage ${i === index ? 'visible' : 'hidden'}`}
+            src={photo.src}
+            alt={photo.alt}
+            key={photo.src}
+          ></img>
+        );
+      })}
     </div>
-    // <Carousel
-    //   autoPlay
-    //   className='carousel'
-    //   indicators={false}
-    //   stopAutoPlayOnHover={false}
-    //   navButtonsAlwaysInvisible
-    //   duration={1000}
-    // >
-    //   {photos.map((photo, i) => (
-    //     // <div className='imageContainer'>
-    //     <img
-    //       key={i}
-    //       src={photo.src}
-    //       alt={photo.alt}
-    //       className='carouselImage'
-    //     />
-    //     // </div>
-    //   ))}
-    // </Carousel>
   );
 };
