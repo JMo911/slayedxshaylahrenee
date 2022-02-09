@@ -10,7 +10,7 @@ import {
   Typography,
 } from '@mui/material';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import { services } from './PricingPage';
+import { services } from '../data/services';
 import { useNavigate } from 'react-router-dom';
 
 const menuPages = [
