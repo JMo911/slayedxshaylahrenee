@@ -3,7 +3,6 @@ import React from 'react';
 import './BookingPage.css';
 import MultiSelect from './MultiSelect';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
-import Calendar from './Calendar';
 
 export const BookingPage: React.FC = () => {
   return (
