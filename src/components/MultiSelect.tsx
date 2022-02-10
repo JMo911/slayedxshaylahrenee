@@ -7,6 +7,7 @@ import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Chip from '@mui/material/Chip';
 import { FilledInput } from '@mui/material';
 import { extras, services } from '../data/services';
+import { useServices } from '../hooks/useServices';
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -19,8 +20,8 @@ const MenuProps = {
   },
 };
 
-export default function MultipleSelectChip() {
-  const [selectedServices, setSelectedServices] = React.useState<string[]>([]);
+export const MultiSelect: React.FC = () => {
+  const { selectedServices, setSelectedServices } = useServices();
 
   const handleChange = (event: SelectChangeEvent<typeof selectedServices>) => {
     const {
@@ -67,4 +68,4 @@ export default function MultipleSelectChip() {
       </FormControl>
     </div>
   );
-}
+};

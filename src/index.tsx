@@ -10,7 +10,7 @@ import { BookingPage } from './components/BookingPage';
 import { GalleryPage } from './components/GalleryPage';
 import { PricingPage } from './components/PricingPage';
 import { ContactPage } from './components/ContactPage';
-// import { createTheme, ThemeProvider } from '@mui/system';
+import { ServiceProvider } from './hooks/useServices';
 
 const THEME = createTheme({
   typography: {
@@ -69,15 +69,17 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={THEME}>
-        <Routes>
-          <Route path='/slayedxshaylahrenee' element={<App />}>
-            <Route path='welcome' element={<WelcomePage />} />
-            <Route path='gallery' element={<GalleryPage />} />
-            <Route path='prices' element={<PricingPage />} />
-            <Route path='booking' element={<BookingPage />} />
-            <Route path='contact' element={<ContactPage />} />
-          </Route>
-        </Routes>
+        <ServiceProvider>
+          <Routes>
+            <Route path='/slayedxshaylahrenee' element={<App />}>
+              <Route path='welcome' element={<WelcomePage />} />
+              <Route path='gallery' element={<GalleryPage />} />
+              <Route path='prices' element={<PricingPage />} />
+              <Route path='booking' element={<BookingPage />} />
+              <Route path='contact' element={<ContactPage />} />
+            </Route>
+          </Routes>
+        </ServiceProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
