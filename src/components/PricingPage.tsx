@@ -39,12 +39,12 @@ export const PricingPage: React.FC = () => {
 
   return (
     <div className='pricingPageWrapper'>
-      {services.map((service) => {
+      {services.map((service, index) => {
         return (
           <Card
             sx={{ maxWidth: 600 }}
             className='serviceCard'
-            key={`${service.name}${service.route}`}
+            key={`${service.name}Card${service.route}${index}`}
           >
             <CardMedia
               component='img'
@@ -53,17 +53,35 @@ export const PricingPage: React.FC = () => {
               alt={service.name}
               id={service.route}
               sx={{ objectFit: 'scale-down' }}
+              key={`${service.name}CardMedia${service.route}${index}`}
             />
-            <CardContent>
-              <Typography gutterBottom variant='h5' component='div'>
+            <CardContent
+              key={`${service.name}CardContent${service.route}${index}`}
+            >
+              <Typography
+                gutterBottom
+                variant='h5'
+                component='div'
+                key={`${service.name}CardContentTypography${service.route}${index}`}
+              >
                 {`${service.name} - $${service.price}`}
               </Typography>
-              <Typography variant='body2' color='text.secondary'>
+              <Typography
+                variant='body2'
+                color='text.secondary'
+                key={`${service.name}CardContentSecondaryTypography${service.route}${index}`}
+              >
                 {service.description}
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size='small' onClick={() => handleOnClick(service)}>
+            <CardActions
+              key={`${service.name}CardAction${service.route}${index}`}
+            >
+              <Button
+                size='small'
+                onClick={() => handleOnClick(service)}
+                key={`${service.name}CardButton${service.route}${index}`}
+              >
                 Book Now
               </Button>
             </CardActions>
@@ -84,16 +102,23 @@ export const PricingPage: React.FC = () => {
           </Typography>
         }
       >
-        {extras.map((extra) => {
+        {extras.map((extra, index) => {
           return (
-            <>
-              <ListItem alignItems='flex-start' key={extra.name}>
-                <ListItemText primary={`${extra.name} $${extra.price}`} />
+            <div key={`${extra}${index}`}>
+              <ListItem alignItems='flex-start' key={`${extra.name}${index}`}>
+                <ListItemText
+                  primary={`${extra.name} $${extra.price}`}
+                  key={`${extra.name}Text${index}`}
+                />
               </ListItem>
               {extra.name !== 'Glitter' ? (
-                <Divider variant='middle' component='li' />
+                <Divider
+                  variant='middle'
+                  component='li'
+                  key={`${extra.name}Divider${index}`}
+                />
               ) : null}
-            </>
+            </div>
           );
         })}
       </List>
