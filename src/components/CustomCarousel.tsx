@@ -29,8 +29,8 @@ export const CustomCarousel = () => {
             className={`carouselImage ${i === index ? 'visible' : 'hidden'}`}
             src={photo.src}
             alt={photo.alt}
-            key={photo.src}
-          ></img>
+            key={`${photo.src}${i}`}
+          />
         );
       })}
     </div>

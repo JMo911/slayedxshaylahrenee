@@ -40,16 +40,17 @@ function WelcomePage() {
               bgcolor: 'background.paper',
             }}
           >
-            {fakeReviews.map((review) => {
+            {fakeReviews.map((review, index) => {
               return (
-                <>
-                  <ListItem>
+                <div key={`fakeReview${index}`}>
+                  <ListItem key={`listItem${index}`}>
                     <Rating
                       value={review.rating}
                       readOnly
                       size='small'
                       icon={<Favorite />}
                       emptyIcon={<FavoriteBorder />}
+                      key={`rating${index}`}
                     />
                     <ListItemText
                       inset
@@ -61,10 +62,15 @@ function WelcomePage() {
                       secondaryTypographyProps={{
                         variant: 'caption',
                       }}
+                      key={`listItemText${index}`}
                     />
                   </ListItem>
-                  <Divider variant='inset' component='li' />
-                </>
+                  <Divider
+                    variant='inset'
+                    component='li'
+                    key={`listItemDivider${index}`}
+                  />
+                </div>
               );
             })}
           </List>
