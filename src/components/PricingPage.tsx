@@ -1,5 +1,4 @@
 import {
-  Avatar,
   Button,
   Card,
   CardActions,
@@ -8,18 +7,20 @@ import {
   Divider,
   List,
   ListItem,
-  ListItemAvatar,
   ListItemText,
   Typography,
 } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { extras, services } from '../data/services';
+import { extras, services, ServiceType } from '../data/services';
+import { useServices } from '../hooks/useServices';
 import './PricingPage.css';
 
 export const PricingPage: React.FC = () => {
   const location = useLocation();
   let navigate = useNavigate();
+  const { setSelectedServices } = useServices();
+
   useEffect(() => {
     if (location.hash) {
       let elem = document.getElementById(location.hash.slice(1));
@@ -31,7 +32,8 @@ export const PricingPage: React.FC = () => {
     }
   }, [location]);
 
-  const handleOnClick = () => {
+  const handleOnClick = (service: ServiceType) => {
+    setSelectedServices([service.name]);
     navigate('/slayedxshaylahrenee/booking', { replace: true });
   };
 
@@ -61,7 +63,7 @@ export const PricingPage: React.FC = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size='small' onClick={handleOnClick}>
+              <Button size='small' onClick={() => handleOnClick(service)}>
                 Book Now
               </Button>
             </CardActions>
@@ -86,24 +88,7 @@ export const PricingPage: React.FC = () => {
           return (
             <>
               <ListItem alignItems='flex-start' key={extra.name}>
-                {/* <ListItemAvatar>
-            <Avatar alt='Remy Sharp' src='/static/images/avatar/1.jpg' />
-          </ListItemAvatar> */}
-                <ListItemText
-                  primary={`${extra.name} $${extra.price}`}
-                  // secondary={
-                  //   <React.Fragment>
-                  //     <Typography
-                  //       sx={{ display: 'inline' }}
-                  //       component='span'
-                  //       variant='body2'
-                  //       color='text.primary'
-                  //     >
-                  //       ${extra.price}
-                  //     </Typography>
-                  //   </React.Fragment>
-                  // }
-                />
+                <ListItemText primary={`${extra.name} $${extra.price}`} />
               </ListItem>
               {extra.name !== 'Glitter' ? (
                 <Divider variant='middle' component='li' />

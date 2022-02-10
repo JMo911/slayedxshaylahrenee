@@ -1,7 +1,7 @@
 import { Alert, Box, Button, FormGroup, TextField } from '@mui/material';
 import React from 'react';
 import './BookingPage.css';
-import MultiSelect from './MultiSelect';
+import { MultiSelect } from './MultiSelect';
 import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 export const BookingPage: React.FC = () => {
@@ -63,18 +63,7 @@ export const BookingPage: React.FC = () => {
         startIcon={<AttachMoneyIcon />}
         sx={{
           margin: '10px 0 10px 0',
-          // backgroundColor: 'var(--light-lilac)',
-          // ':hover': {
-          //   bgcolor: 'var(--lilac)', // theme.palette.primary.main
-          //   color: 'white',
-          // },
         }}
-        // sx={{
-        // ':hover': {
-        //   bgcolor: 'primary.main', // theme.palette.primary.main
-        //   color: 'white',
-        // },
-        // }}
       >
         Pay Now
       </Button>
