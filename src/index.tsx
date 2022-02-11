@@ -77,6 +77,7 @@ ReactDOM.render(
               <Route path='prices' element={<PricingPage />} />
               <Route path='booking' element={<BookingPage />} />
               <Route path='contact' element={<ContactPage />} />
+              <Route path='/' element={<WelcomePage />} />
             </Route>
           </Routes>
         </ServiceProvider>
