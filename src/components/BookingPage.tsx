@@ -22,6 +22,7 @@ export const BookingPage: React.FC = () => {
       >
         <FormGroup row>
           <TextField
+            autoFocus
             required
             id='filled-required'
             label='First Name'

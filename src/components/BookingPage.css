@@ -3,3 +3,11 @@
   flex-flow: column;
   align-items: center;
 }
+
+/* keeps autofill color same as text field initial background color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #d8c8ba inset !important;
+}
