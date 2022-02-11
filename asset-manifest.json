@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/slayedxshaylahrenee/welcome/static/css/main.d9077082.chunk.css",
-    "main.js": "/slayedxshaylahrenee/welcome/static/js/main.81ed207b.chunk.js",
-    "main.js.map": "/slayedxshaylahrenee/welcome/static/js/main.81ed207b.chunk.js.map",
-    "runtime-main.js": "/slayedxshaylahrenee/welcome/static/js/runtime-main.5b7191e6.js",
-    "runtime-main.js.map": "/slayedxshaylahrenee/welcome/static/js/runtime-main.5b7191e6.js.map",
-    "static/js/2.3c7046f5.chunk.js": "/slayedxshaylahrenee/welcome/static/js/2.3c7046f5.chunk.js",
-    "static/js/2.3c7046f5.chunk.js.map": "/slayedxshaylahrenee/welcome/static/js/2.3c7046f5.chunk.js.map",
-    "static/js/3.668b606d.chunk.js": "/slayedxshaylahrenee/welcome/static/js/3.668b606d.chunk.js",
-    "static/js/3.668b606d.chunk.js.map": "/slayedxshaylahrenee/welcome/static/js/3.668b606d.chunk.js.map",
-    "index.html": "/slayedxshaylahrenee/welcome/index.html",
-    "static/css/main.d9077082.chunk.css.map": "/slayedxshaylahrenee/welcome/static/css/main.d9077082.chunk.css.map",
-    "static/js/2.3c7046f5.chunk.js.LICENSE.txt": "/slayedxshaylahrenee/welcome/static/js/2.3c7046f5.chunk.js.LICENSE.txt"
+    "main.css": "/slayedxshaylahrenee/static/css/main.d9077082.chunk.css",
+    "main.js": "/slayedxshaylahrenee/static/js/main.3611be61.chunk.js",
+    "main.js.map": "/slayedxshaylahrenee/static/js/main.3611be61.chunk.js.map",
+    "runtime-main.js": "/slayedxshaylahrenee/static/js/runtime-main.7527cb8a.js",
+    "runtime-main.js.map": "/slayedxshaylahrenee/static/js/runtime-main.7527cb8a.js.map",
+    "static/js/2.3c7046f5.chunk.js": "/slayedxshaylahrenee/static/js/2.3c7046f5.chunk.js",
+    "static/js/2.3c7046f5.chunk.js.map": "/slayedxshaylahrenee/static/js/2.3c7046f5.chunk.js.map",
+    "static/js/3.668b606d.chunk.js": "/slayedxshaylahrenee/static/js/3.668b606d.chunk.js",
+    "static/js/3.668b606d.chunk.js.map": "/slayedxshaylahrenee/static/js/3.668b606d.chunk.js.map",
+    "index.html": "/slayedxshaylahrenee/index.html",
+    "static/css/main.d9077082.chunk.css.map": "/slayedxshaylahrenee/static/css/main.d9077082.chunk.css.map",
+    "static/js/2.3c7046f5.chunk.js.LICENSE.txt": "/slayedxshaylahrenee/static/js/2.3c7046f5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5b7191e6.js",
+    "static/js/runtime-main.7527cb8a.js",
     "static/js/2.3c7046f5.chunk.js",
     "static/css/main.d9077082.chunk.css",
-    "static/js/main.81ed207b.chunk.js"
+    "static/js/main.3611be61.chunk.js"
   ]
 }
