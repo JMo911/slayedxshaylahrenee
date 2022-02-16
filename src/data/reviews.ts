@@ -4,7 +4,6 @@ export interface ReviewType {
 }
 
 export const fakeReviews: ReviewType[] = [
-  // test
   {
     rating: 5,
     comment:
