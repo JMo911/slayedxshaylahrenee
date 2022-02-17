@@ -1,0 +1,1 @@
+- branches should include the number of the github issue they address followed by a forward slash and short snake-case description of the ticket. i.e. 4/enlarge-gallery-imagess
