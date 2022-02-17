@@ -1,5 +1,7 @@
 # Getting Started
 
+Read the [Contributing MD](https://github.com/JMo911/slayedxshaylahrenee/blob/main/CONTRIBUTING.md) to see how you can contribute to this project.
+
 ## Available Scripts
 
 - run `npm i` to grab dependencies
