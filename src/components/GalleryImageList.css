@@ -14,3 +14,20 @@
   border-radius: 5px;
   box-shadow: 0px 0px 5px var(--dark-brown);
 }
+
+.singleGalleryImgDialog {
+  overflow-y: hidden;
+}
+
+.singleGalleryImg {
+  height: 100%;
+  width: 100%;
+}
+
+.dialogCloseButton {
+  position: absolute !important;
+  right: -10px !important;
+  background-color: var(--rose-gold) !important;
+  opacity: 70%;
+  top: -10px !important;
+}

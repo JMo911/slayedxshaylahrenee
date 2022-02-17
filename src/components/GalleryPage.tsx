@@ -1,10 +1,9 @@
-import React from 'react';
-import GalleryImageList from './GalleryImageList';
-import './GalleryPage.css';
+import React from "react";
+import GalleryImageList from "./GalleryImageList";
 
 export const GalleryPage: React.FC = () => {
   return (
-    <div className='galleryPageWrapper'>
+    <div className="galleryPageWrapper">
       <GalleryImageList />
     </div>
   );
